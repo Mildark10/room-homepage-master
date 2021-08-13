@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .section {
+            display: grid;
+            grid-template-columns: 51% 49%;
+        }
+        
+        .section div img {
+            width: 50.4vw;
+            height: 65vh;
+            position: relative;
+        }
+        
+        .segundo {
+            padding: 0%;
+            display: grid;
+            grid-template-columns: 30% 40% 30%;
+        }
+        
+        .segundo div img {
+            width: 29.6vw;
+            height: 30vh;
+        }
+        
+        .texto {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+        }
+        
+        .cuadro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 80%;
+            height: 45vh;
+            margin: 0 auto;
+        }
+        
+        @supports(object-fit: cover) {
+            .section div img,
+            .segundo div img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+        
+        @media screen and (min-width: 120px) and (max-width: 920px) {
+            .section {
+                width: 100vw;
+                height: 130vh;
+                display: flex;
+                flex-wrap: wrap;
+                border: 1px solid blue;
+            }
+            .section div {
+                height: 78vh;
+                width: 100vw;
+            }
+            .section div img {
+                width: 100vw;
+                height: 70vh;
+            }
+            .cuadro {
+                height: 45vh;
+                margin: 0 auto;
+            }
+            .segundo {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            .segundo div img {
+                max-width: 100vw;
+                width: 100vw;
+                max-height: 100vh;
+                height: 60vh;
+            }
+        }
+        
+        .cuadro div h2 {
+            width: 90%;
+            display: flex;
+            /*  font-size: 2.2em; */
+            font-size: calc(1.2rem + 1.2rem);
+            letter-spacing: 0.07em;
+            font-weight: 700;
+        }
+        
+        .cuadro div p {
+            width: 90%;
+            font-size: 0.8em;
+            margin-top: 1em;
+            margin-bottom: 1.4em;
+        }
+        
+        .cuadro div h3 {
+            display: inline-block;
+            letter-spacing: 1.5vh;
+            text-transform: uppercase;
+        }
+        
+        .cuadro div img {
+            width: 4vw;
+            height: 2vh;
+        }
+        
+        .caja-t {
+            margin: 0 auto;
+            width: 80%;
+        }
+        
+        .caja-t div h3 {
+            margin-bottom: 1em;
+        }
+        
+        .caja-t div p {
+            margin-top: 1em;
+        }
+        
+        .texto-box {
+            border: 1px solid violet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <div>
+            <!--  <div class="header">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="">
+                </div>
+                <div class="nav">
+
+                    <ul>
+                        <a href="#">home</a>
+                        <a href="#">shop</a>
+                        <a href="#">about</a>
+                        <a href="#">contact</a>
+                    </ul>
+                </div>
+            </div> -->
+            <img src="images/desktop-image-hero-1.jpg" alt=""></div>
+        <div class="texto">
+            <div class="texto-box">
+                <div class="cuadro">
+                    <div class="active">
+                        <h2>Discover innovative ways to decorate</h2>
+                        <p> We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property
+                            a reflection of you and what you love.</p>
+                        <h3>Shop now </h3>
+                        <img class="arrow" src="images/icon-arrow.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cont-c">
+                <ul class="controls">
+                    <li onclick="PrevSlide();PrevSlideText();"></li>
+                    <li onclick="nextSlide(); nextSlideText();"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="segundo">
+        <div><img src="images/image-about-dark.jpg" alt=""></div>
+        <div class="texto caja-t">
+            <div>
+                <h3>About our furniture</h3>
+                <p> Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires you. Find the furniture pieces you need, from traditional
+                    to contemporary styles or anything in between. Product specialists are available to help you create your dream space.</p>
+            </div>
+        </div>
+        <div><img src="images/image-about-light.jpg" alt=""></div>
+    </div>
+
+</body>
+
+</html>

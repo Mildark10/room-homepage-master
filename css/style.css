@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+
+/* generales*/
+
+* {
+    font-family: 'Spartan', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dar-gray: hsl(0, 0%, 63%);
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    --varyDay: hsl(0, 0%, 27%);
+}
+
+
+/**/
+
+
+/***/
+
+.cont-c {
+    display: flex;
+}
+
+.controls {
+    display: flex;
+    width: 8vw;
+    margin-right: auto;
+}
+
+.controls li {
+    position: relative;
+    width: 15vw;
+    height: 8vh;
+    background: var(--black);
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.controls li:hover {
+    background: var(--varyDay);
+    opacity: 0.9;
+}
+
+.controls li:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-left: 0.1em solid var(--white);
+    border-bottom: 0.1em solid var(--white);
+    transform: rotate(45deg);
+}
+
+.controls li:nth-child(2):before {
+    transform: rotate(225deg);
+}
+
+@media screen and (min-width: 120px) and (max-width: 920px) {}

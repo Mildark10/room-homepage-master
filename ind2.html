@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+    /* generales*/
+    
+    * {
+        font-family: 'Spartan', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+     :root {
+        --dar-gray: hsl(0, 0%, 63%);
+        --black: hsl(0, 0%, 0%);
+        --white: hsl(0, 0%, 100%);
+        --varyDay: hsl(0, 0%, 27%);
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    /*Fin de generales*/
+    /* PRINCIPAL BODY*/
+    
+    .principal {
+        display: grid;
+        flex-wrap: wrap;
+        grid-template-columns: 58% 42%;
+    }
+    
+    .img-box {
+        display: flex;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+    
+    .img-box img {
+        width: 100%;
+    }
+    
+    .box ul {
+        display: flex;
+        position: relative;
+        margin: 25px;
+        z-index: 1;
+    }
+    
+    .box ul div img {
+        margin-right: 6em;
+    }
+    
+    .box ul a {
+        margin-right: 1.5em;
+        text-decoration: none;
+        color: var(--white);
+    }
+    
+    .contenido-box {
+        display: flex;
+        flex-direction: column;
+        height: 35vw;
+        margin-top: 4em;
+    }
+    
+    .contenido-control {
+        margin-top: 8.9em;
+        width: 25%;
+    }
+    
+    .contenido-control .controls {
+        display: flex;
+    }
+    
+    .contenido-control .controls li {
+        position: relative;
+        width: 15vw;
+        height: 9vh;
+        background: var(--black);
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .contenido-control .controls li:hover {
+        background: var(--varyDay);
+        opacity: 0.9;
+    }
+    
+    .contenido-control .controls li:before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-left: 1px solid var(--white);
+        border-bottom: 1px solid var(--white);
+        transform: rotate(45deg);
+    }
+    
+    .contenido-control .controls li:nth-child(2):before {
+        transform: rotate(225deg);
+    }
+    
+    .contenido-texto h2 {
+        font-size: 2.5em;
+        font-weight: 700;
+        padding: 1em;
+    }
+    
+    .contenido-texto p {
+        padding: 2em;
+        color: var(--dar-gray);
+        font-weight: 300;
+        font-size: 0.9em;
+    }
+    
+    @media only screen and (max-width: 992px) {
+        .principal {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex: 2vh;
+        }
+        .img-box {
+            position: absolute;
+        }
+    }
+    /*FIN*/
+    /*SECCION 2*/
+</style>
+
+<body>
+    <section class="body">
+        <div class="principal">
+            <div class="box">
+                <header>
+                    <ul>
+                        <div>
+                            <img src="images/logo.svg" alt="logo">
+                        </div>
+                        <a href="#">home</a>
+                        <a href="#">shop</a>
+                        <a href="#">about</a>
+                        <a href="#">contact</a>
+                    </ul>
+                </header>
+                <div class="img-box">
+                    <img src="images/desktop-image-hero-1.jpg" alt="imagen-1" class="active">
+                </div>
+            </div>
+            <div class="contenido-box">
+                <div class="contenido-texto">
+                    <div class="active">
+                        <h2>Discover innovative ways to decorate</h2>
+                        <p> We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property
+                            a reflection of you and what you love.</p>
+                        <h3>Shop now </h3><img class="arrow" src="images/icon-arrow.svg" alt="">
+                    </div>
+                </div>
+                <div class="contenido-control">
+                    <ul class="controls">
+                        <li onclick="PrevSlide();PrevSlideText();"></li>
+                        <li onclick="nextSlide(); nextSlideText();"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
